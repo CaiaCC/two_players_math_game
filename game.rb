@@ -11,11 +11,13 @@ class Game
 	def display_status
 		puts "----- PLAYER STATUS -----"
 		@players.each{|player| puts "#{player.name}: #{player.lives}/3" }
+		sleep 1
 	end
 
 	def next_turn
 		@players.rotate!
 		puts "----- NEW TURN -----"
+		sleep 1
 	end
 
 	
@@ -28,7 +30,7 @@ class Game
 		puts "#{winner.name} wins a score of #{winner.lives}/3."
 	end
 
-	def play_loop
+	def play
 
 		until(game_over?) do
 			puts "#{@players.first.name}: "

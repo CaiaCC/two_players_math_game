@@ -21,6 +21,7 @@ class Question
     else 
       puts "Seriously? No!"
     end
+    sleep 1
   end
 end
 
