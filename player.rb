@@ -3,18 +3,20 @@ require './question'
 class Player
   attr_reader :name
   attr_accessor :lives
+  #define_method "lives-=" {|n| @lives -= n}
 
   def initialize(name)
     @name = name
     @lives = 3
   end
-  
-  def current_lives(boolean)
-    boolean ? lives : @lives -= 1  # lives -= 1 won't work if no @ prepend
+
+
+  def lose_lives  #update live lose_lives
+    @lives -= 1
   end
 
   def dead?
-    lives <= 0 ? true : false
+    lives <= 0 #? true : false ->redunctant
   end
 end
 
